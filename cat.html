@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <title>Cat</title>
+  
   <style>
   body {
   font-size: 2.5rem;  
@@ -13,15 +14,13 @@
     position: absolute;
 }
   </style>
-  <srcipt>
-  var myCat = document.getElementById("cat"); 
-
-
-function myMove() {
-   
-  var id = setInterval(frame, 800);
   
- 
+  <srcipt>
+var myCat = document.getElementById("cat"); 
+    
+function myMove() {
+  var id = setInterval(frame, 800);
+   
   function frame() {
     let a = Math.random()*200;
     let b = Math.random()*300;
@@ -42,14 +41,14 @@ function myMove() {
     else {
       clearInterval(id);
     }
-  
-  }
+    }
 }
 
 function stop(){
   document.write('<body style="background-color:green"><h1 style="color:gold; text-align:center; margin-top:200px;" >Congratulations! You catched the cat!</h1></body>');
 }
   </script>
+    
 </head>
 
 <body>
