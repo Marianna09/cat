@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cat</title>
+  <style>
+  body {
+  font-size: 2.5rem;  
+  background-color: green;
+}
+#cat {
+    position: absolute;
+}
+  </style>
+  <srcipt>
+  var myCat = document.getElementById("cat"); 
+
+
+function myMove() {
+   
+  var id = setInterval(frame, 800);
+  
+ 
+  function frame() {
+    let a = Math.random()*200;
+    let b = Math.random()*300;
+    var posx = a;
+    var posy = b; 
+  if (posx <= a/2){
+      posx++;
+      posy++;
+      myCat.style.top = posy + 'px'; 
+      myCat.style.left = posx + 'px'; 
+    }
+    else if(posx >= a/2 && posx <= a) {
+      posx++;
+      posy--;
+      myCat.style.top = posy + 'px'; 
+      myCat.style.left = posx + 'px'; 
+    }
+    else {
+      clearInterval(id);
+    }
+  
+  }
+}
+
+function stop(){
+  document.write('<body style="background-color:green"><h1 style="color:gold; text-align:center; margin-top:200px;" >Congratulations! You catched the cat!</h1></body>');
+}
+  </script>
+</head>
+
+<body>
+  <button onclick="myMove()">START</button>
+  <div onclick="stop()" id ="cat">😸</div>
+ </body>
+</html>
